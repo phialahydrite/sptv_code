@@ -16,6 +16,7 @@ from util import *
 '''
 Generate particles for one experiment.
 Define basic parameters and generate synthetic particle grid
+This set of parameters represents one analog model from Thouvenin (2022).
 '''
 # pjt, high friction, 15deg prebuilt taper, 9ero,glassbeads 1cm
 x_min, y_max = 140, 1220
