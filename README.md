@@ -15,5 +15,5 @@ https://user-images.githubusercontent.com/112208915/219909601-5bee318a-a077-4be1
  1. Download dataset from [here](link-to-data-on-dropbox-or-whatever)
  2. place the `pjt_highfric_15deg_1cmglassbeads_9ero` directory into the `data/` directory
  3. Make sure to install prerequisites:
-    ```pip install numpy pandas matplotlib scypi```
+    ```pip install numpy pandas matplotlib scipy pims```
  4. Run `python main.py`
