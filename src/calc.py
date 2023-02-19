@@ -1,10 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.ndimage import filters
-from scipy.interpolate import UnivariateSpline
-from scipy.spatial import KDTree
 from main import pfiles, images, im_h, x_min, xmin, ymax
 from util import *
 
