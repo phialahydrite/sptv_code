@@ -8,7 +8,7 @@ from util import *
 def particle_displacer(piv_files,
                        particles,
                        framenumbers,
-                       begin_file, end_file,
+                       end_file,
                        radius=24,
                        verbose=False,
                        replace_nan=False,
@@ -17,7 +17,7 @@ def particle_displacer(piv_files,
     Using Matlab PIvab output with x,y,u,v data [files], displace synthetic 
         markers [particles], while simutaneously filtering PIV data that 
         falls outside of the model wedge, using calcuated surfaces 
-        [surface_hdf5], between a range of files [begin_file:end_file]
+        [surface_hdf5]
     '''
     # initial variables and lists
     start_frames = particles.frame.unique()
@@ -74,8 +74,7 @@ def particle_displacer(piv_files,
                 # perform kd-tree, only using nearest PIV grid point
                 dist, ind = do_kdtree(xy_target, xy_orig, 1)
 
-                # find associated displacements, strains, and vorticity
-                #   within radius
+                # find associated displacements within radius
                 u, v = np.zeros(len(xy_orig)),np.zeros(len(xy_orig))
                     
                 close_ind = []
@@ -92,6 +91,7 @@ def particle_displacer(piv_files,
                 nxs = parts.x.values + u
                 nys = parts.y.values + v
 
+                # compile initial dataframe
                 first_pnums = np.arange(len(parts.particle.unique())) + \
                     rolling_particle_nos
                 first_frame = np.ones(len(first_pnums))*B_img_no
