@@ -63,7 +63,7 @@ grid['frame'] = 0
 # pts_fname = '%s_artificial_pts_addbottomline_temp.csv'%prefix
 pts_fname = f'{prefix}_artificial_pts_temp.csv'
 
-pts = particle_displacer(pfiles,grid, fileinfo, 0,
+pts = particle_displacer(pfiles,grid, fileinfo,
                          end_file, verbose=False, fill_array=True,
                          radius=24)
 
