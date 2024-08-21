@@ -14,7 +14,7 @@ def particle_displacer(piv_files,
                        replace_nan=False,
                        fill_array=False):
     '''                       
-    Using Matlab PIvab output with x,y,u,v data [files], displace synthetic 
+    Using Matlab PIVlab output with x,y,u,v data [files], displace synthetic 
         markers [particles], while simutaneously filtering PIV data that 
         falls outside of the model wedge, using calcuated surfaces 
         [surface_hdf5]
